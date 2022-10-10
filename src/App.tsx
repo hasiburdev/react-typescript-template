@@ -1,12 +1,20 @@
-import { useState } from 'react'
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 
-function App() {
-
+export function App(): JSX.Element {
   return (
-    <div>
-      Hello React
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
 }
 
-export default App
+export function WrappedApp(): JSX.Element {
+  return (
+    <HashRouter>
+      <App />
+    </HashRouter>
+  );
+}
