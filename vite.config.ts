@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/triple-slash-reference */
 /* eslint-disable import/no-extraneous-dependencies */
 /// <reference types="vitest" />
 /// <reference types="vite/client" />
